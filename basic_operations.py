@@ -13,7 +13,9 @@ image_grayscale = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) #turning gray
 
 
 image_grayscale[175, 100] = 255 #255-white
+col, rows, ch = image.shape
 
+roi = image[0: rows, 0: col] #half of the image
 print(image_grayscale)
 
 
